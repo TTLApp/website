@@ -1,10 +1,12 @@
+@use "breakpoints";
+
 .daysoff__image {
     width: 100%
 }
 
 .daysoff > .marketing {
 
-    @include for-phone-only {
+    @include breakpoints.for-phone-only {
         margin-top: 30px;
     }
 

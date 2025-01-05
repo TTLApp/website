@@ -1,11 +1,14 @@
+@use "mixin-font-size";
+@use "vars";
+
 html {
-    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+    @include mixin-font-size.fluid-type(vars.$min_width, vars.$max_width, vars.$min_font, vars.$max_font);
 } 
 
 h1, h2, h3, h4, h5, h6, button{
-    font-family: $roboto;
+    font-family: vars.$roboto;
 }
 
 p, a, li, small{
-    font-family: $open;
+    font-family: vars.$open;
 }

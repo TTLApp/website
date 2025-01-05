@@ -1,3 +1,5 @@
+@use "breakpoints";
+
 .header__nav{
   position: fixed;
     width: 100%;
@@ -14,7 +16,7 @@
         white-space: nowrap;
     }
 
-    @include for-phone-only {
+    @include breakpoints.for-phone-only {
         display: none;
     }
 }

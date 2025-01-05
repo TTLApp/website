@@ -1,3 +1,7 @@
+@use "breakpoints";
+@use "mixin-font-size";
+@use "vars";
+
 .intro{
     background: url('./images/herobg.svg') no-repeat center right;
     background-size: contain;
@@ -11,7 +15,7 @@
         width: auto;
     }
 
-    @include for-phone-only {
+    @include breakpoints.for-phone-only {
         img{
             width: 100%;
         }
@@ -20,7 +24,7 @@
 
 
 .intro__title{
-    @include fluid-type($min_width, $max_width, $min_title, $max_title);
+    @include mixin-font-size.fluid-type(vars.$min_width, vars.$max_width, vars.$min_title, vars.$max_title);
     margin-bottom: 30px;
     text-align: center;
     img{
