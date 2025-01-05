@@ -24,9 +24,10 @@
 
 
 .intro__title{
-    @include mixin-font-size.fluid-type(vars.$min_width, vars.$max_width, vars.$min_title, vars.$max_title);
     margin-bottom: 30px;
     text-align: center;
+    
+    @include mixin-font-size.fluid-type(vars.$min_width, vars.$max_width, vars.$min_title, vars.$max_title);
     img{
         width: 50px;
         vertical-align: middle;

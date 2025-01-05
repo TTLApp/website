@@ -4,13 +4,13 @@
 
 button,
 a.button--primary {
-    @include mixin-font-size.fluid-type(vars.$min_width, vars.$max_width, vars.$min_font, vars.$max_font);
     border-radius: 4px;
     border: 0px;
     font-weight: 500;
     cursor: pointer;
     vertical-align: top;
     text-decoration: none;
+    @include mixin-font-size.fluid-type(vars.$min_width, vars.$max_width, vars.$min_font, vars.$max_font);
 }
 
 .button--primary {
@@ -78,12 +78,6 @@ a.button--primary {
             display: block;
 
             a {
-                @include mixin-font-size.fluid-type(
-                    vars.$min_width,
-                    vars.$max_width,
-                    vars.$min_sfont,
-                    vars.$max_sfont
-                );
                 font-weight: 600;
                 text-decoration: none;
                 width: 100%;
@@ -91,6 +85,12 @@ a.button--primary {
                 display: block;
                 color: color.adjust(vars.$lightblue, $lightness: -40%);
                 transition: all 0.1s ease-in;
+                @include mixin-font-size.fluid-type(
+                    vars.$min_width,
+                    vars.$max_width,
+                    vars.$min_sfont,
+                    vars.$max_sfont
+                );
                 &:hover {
                     background: vars.$lightblue;
                 }

@@ -19,12 +19,13 @@
 }
 
 .cta__desc {
-    @include mixin-font-size.fluid-type(vars.$min_width, vars.$max_width, vars.$min_font, vars.$max_font);
     margin-bottom: 50px;
     line-height: 1.5;
     max-width: 40%;
     margin: 0 auto 50px;
     text-align: center;
+
+    @include mixin-font-size.fluid-type(vars.$min_width, vars.$max_width, vars.$min_font, vars.$max_font);
 
     @include breakpoints.for-phone-only {
         max-width: 90%;
@@ -48,9 +49,9 @@
 }
 
 .cta__free__money {
-    @include mixin-font-size.fluid-type(vars.$min_width, vars.$max_width, vars.$min-title, vars.$max-title);
     font-weight: 500;
     margin-bottom: 10px;
+    @include mixin-font-size.fluid-type(vars.$min_width, vars.$max_width, vars.$min-title, vars.$max-title);
 }
 
 .cta__free__desc {
@@ -59,8 +60,8 @@
 
 .cta__free__punchline {
     color: #5d6970;
-    @include mixin-font-size.fluid-type(vars.$min_width, vars.$max_width, vars.$min_sfont, vars.$max_sfont);
     margin: 50px 0 20px;
+    @include mixin-font-size.fluid-type(vars.$min_width, vars.$max_width, vars.$min_sfont, vars.$max_sfont);
 }
 
 .button--primary {

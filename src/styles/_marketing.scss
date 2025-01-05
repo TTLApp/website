@@ -12,9 +12,10 @@
 }
 
 .marketing__desc {
-    @include mixin-font-size.fluid-type(vars.$min_width, vars.$max_width, vars.$min_font, vars.$max_font);
     margin-bottom: 50px;
     line-height: 1.5;
+
+    @include mixin-font-size.fluid-type(vars.$min_width, vars.$max_width, vars.$min_font, vars.$max_font);
 
     @include breakpoints.for-phone-only {
         text-align: justify;
@@ -49,8 +50,8 @@
 }
 
 .marketing__title {
-    @include mixin-font-size.fluid-type(vars.$min_width, vars.$max_width, vars.$min_subtitle, vars.$max_subtitle);
     margin-bottom: 30px;
+    @include mixin-font-size.fluid-type(vars.$min_width, vars.$max_width, vars.$min_subtitle, vars.$max_subtitle);
 }
 
 .marketing__features {
@@ -70,12 +71,12 @@
 }
 
 .marketing__feature__title {
-    @include mixin-font-size.fluid-type(vars.$min_width, vars.$max_width, vars.$min_font, vars.$max_font);
     font-weight: 500;
     margin: 20px 0;
+    @include mixin-font-size.fluid-type(vars.$min_width, vars.$max_width, vars.$min_font, vars.$max_font);
 }
 
 .marketing__feature__desc {
-    @include mixin-font-size.fluid-type(vars.$min_width, vars.$max_width, vars.$min_sfont, vars.$max_sfont);
     line-height: 1.5;
+    @include mixin-font-size.fluid-type(vars.$min_width, vars.$max_width, vars.$min_sfont, vars.$max_sfont);
 }
