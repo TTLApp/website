@@ -1,26 +1,23 @@
 {
   "name": "time-to-leave-website",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "license": "GPL-3.0",
   "scripts": {
     "clean": "rm dist/bundle.js",
     "start": "parcel src/index.html",
     "build-prod": "parcel build src/index.html"
   },
   "dependencies": {
-    "gsap": "3.7.0",
-    "imagesloaded": "4.1.4",
-    "splitting": "1.0.6",
-    "parcel-bundler": "1.12.4"
+    "gsap": "3.12.5",
+    "imagesloaded": "5.0.0",
+    "parcel": "2.13.3"
   },
   "devDependencies": {
-    "@babel/core": "7.14.6",
-    "@babel/preset-env": "7.12.16",
-    "parcel-bundler": "1.12.4",
-    "sass": "1.35.1"
+    "@parcel/packager-raw-url": "2.13.3",
+    "@parcel/packager-xml": "2.13.3",
+    "@parcel/transformer-sass": "2.13.3",
+    "@parcel/transformer-webmanifest": "2.13.3",
+    "@parcel/transformer-xml": "2.13.3",
+    "svgo": "3.3.2"
   }
 }

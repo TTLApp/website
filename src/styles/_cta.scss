@@ -1,3 +1,7 @@
+@use "breakpoints";
+@use "mixin-font-size";
+@use "vars";
+
 .cta {
     position: relative;
     &:after {
@@ -6,7 +10,7 @@
         right: 0;
         bottom: 0;
         top: 0;
-        background-color: $lightblue;
+        background-color: vars.$lightblue;
         opacity: 0.3;
         display: block;
         content: "";
@@ -15,14 +19,15 @@
 }
 
 .cta__desc {
-    @include fluid-type($min_width, $max_width, $min_font, $max_font);
     margin-bottom: 50px;
     line-height: 1.5;
     max-width: 40%;
     margin: 0 auto 50px;
     text-align: center;
 
-    @include for-phone-only {
+    @include mixin-font-size.fluid-type(vars.$min_width, vars.$max_width, vars.$min_font, vars.$max_font);
+
+    @include breakpoints.for-phone-only {
         max-width: 90%;
         text-align: justify;
     }
@@ -33,34 +38,34 @@
     margin: 0 auto;
     text-align: center;
 
-    @include for-phone-only {
+    @include breakpoints.for-phone-only {
         max-width: 70%;
     }
 }
 
 .cta__free__desc,
 .cta__free__money {
-    color: $middleblue;
+    color: vars.$middleblue;
 }
 
 .cta__free__money {
-    @include fluid-type($min_width, $max_width, $min-title, $max-title);
     font-weight: 500;
     margin-bottom: 10px;
+    @include mixin-font-size.fluid-type(vars.$min_width, vars.$max_width, vars.$min-title, vars.$max-title);
 }
 
 .cta__free__desc {
-    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+    @include mixin-font-size.fluid-type(vars.$min_width, vars.$max_width, vars.$min_font, vars.$max_font);
 }
 
 .cta__free__punchline {
     color: #5d6970;
-    @include fluid-type($min_width, $max_width, $min_sfont, $max_sfont);
     margin: 50px 0 20px;
+    @include mixin-font-size.fluid-type(vars.$min_width, vars.$max_width, vars.$min_sfont, vars.$max_sfont);
 }
 
 .button--primary {
-    @include for-phone-only {
+    @include breakpoints.for-phone-only {
         height: 2.5rem;
         width: 13rem;
     }
